@@ -19,7 +19,7 @@ resource "null_resource" "provisioner" {
     }
 
     inline = [
-      "ansible-pull -i localhost, -U https://github.com/vdps007/roboshop-ansible roboshop.yml -e role_name=${var.component}"
+      "ansible-pull -i localhost, -U https://github.com/vdps007/roboshop-ansible roboshop.yml -e role_name=${var.component} -e env=${var.env}"
       //"git clone https://github.com/vdps007/Roboshop-shell",
       //"cd Roboshop-shell",
       //"sudo bash ${var.component}.sh ${var.password}"
