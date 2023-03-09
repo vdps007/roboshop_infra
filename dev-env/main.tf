@@ -1,5 +1,4 @@
-variable "instances" {
-  default = {
+instances {
     frontend = {
       name = "frontend"
       type = "t2.micro"
@@ -45,6 +44,5 @@ variable "instances" {
       password = "roboshop123"
     }
   }
-}
 
-variable "env" {}
+  env = "dev"
