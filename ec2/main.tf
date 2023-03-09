@@ -90,10 +90,14 @@ resource "aws_iam_role" "role" {
     "Statement": [
         {
             "Effect": "Allow",
+            "Action": [
+                "sts:AssumeRole"
+            ],
             "Principal": {
-                "Service": "spot.amazonaws.com"
-            },
-            "Action": "sts:AssumeRole"
+                "Service": [
+                    "ec2.amazonaws.com"
+                ]
+            }
         }
     ]
 })
