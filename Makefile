@@ -1,5 +1,5 @@
 hello:
-    echo "hello, world"
+	echo "hello, world"
 #git:
 #    git pull
 #dev-apply: git
