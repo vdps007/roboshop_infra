@@ -53,7 +53,7 @@ resource "aws_security_group" "sg" {
   }
 }
 
-resource "aws_iam_policy" "policy" {
+resource "aws_iam_policy" "ssm-policy" {
   name        = "${var.env}-${var.component}-ssm"
   path        = "/"
   description = "M${var.env}-${var.component}-ssm"
