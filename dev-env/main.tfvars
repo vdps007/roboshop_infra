@@ -2,6 +2,7 @@ instances {
     frontend = {
       name = "frontend"
       type = "t2.micro"
+      monitor = true
     }
     mongodb = {
       name = "mongodb"
@@ -10,6 +11,7 @@ instances {
     catalogue = {
       name = "catalogue"
       type = "t2.micro"
+      monitor = true
     }
     redis = {
       name = "redis"
@@ -18,30 +20,30 @@ instances {
     user = {
       name = "user"
       type = "t2.micro"
+      monitor = true
     }
     cart = {
       name = "cart"
       type = "t2.micro"
+      monitor = true
     }
     mysql = {
       name     = "mysql"
       type     = "t2.micro"
-      password = "RoboShop@1"
     }
     shipping = {
       name     = "shipping"
       type     = "t2.micro"
-      password = "RoboShop@1"
+      monitor = true
     }
     rabbitmq = {
       name     = "rabbitmq"
       type     = "t2.micro"
-      password = "roboshop123"
     }
     payment = {
       name     = "payment"
       type     = "t2.micro"
-      password = "roboshop123"
+      monitor = true
     }
   }
 
