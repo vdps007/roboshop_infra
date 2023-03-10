@@ -1,5 +1,3 @@
-hello:
-    echo "hello world"
 git:
     git pull
 dev-apply: git
