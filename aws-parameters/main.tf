@@ -11,6 +11,5 @@ resource "aws_ssm_parameter" "secret" {
   type  = var.secrets[count.index].type
   value = var.secrets[count.index].value
 }
-
 variable "parameters" {}
 variable "secrets" {}
