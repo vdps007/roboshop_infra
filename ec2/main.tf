@@ -57,6 +57,14 @@ resource "aws_security_group" "sg" {
   }
 }
 
+resource "aws_route53_record" "record" {
+  zone_id = "Z0951825YO9TU21VYS1Z"
+  name    = "${var.component}-${var.env}.itsmevdps.online"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.ec2.private_ip]
+}
+
 resource "aws_iam_policy" "ssm-policy" {
   name        = "${var.env}-${var.component}-ssm"
   path        = "/"
@@ -101,14 +109,6 @@ resource "aws_iam_role" "role" {
         }
     ]
 })
-}
-
-resource "aws_route53_record" "record" {
-  zone_id = "Z0951825YO9TU21VYS1Z"
-  name    = "${var.component}-${var.env}.itsmevdps.online"
-  type    = "A"
-  ttl     = 30
-  records = [aws_instance.ec2.private_ip]
 }
 
 resource "aws_iam_instance_profile" "profile" {
